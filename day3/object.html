@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <script>
+        // 对象
+        // 创建对象
+        var obj = {
+            uname : 'savet',
+            age : 24,
+            sex : 'male',
+            sayHi : function() {
+                console.log('hi~');
+            }
+        }
+        console.log(obj.age);
+        console.log(obj['uname']);
+        obj.sayHi();
+
+        var obj2 = new Object();
+        obj2.uname = 'savet2'
+        obj2.age = 25
+        obj.sex = 'male'
+        obj.sayHi = function() {
+            console.log('hi~');
+        }
+        console.log(obj2.uname);
+
+        function Star(uname, age, sex) {
+            this.uname = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sayHi = function() {
+                console.log('hi·');
+            }
+        }
+        var obj3 = new Star('savet3', '26', 'male');
+        console.log(typeof obj3);
+
+        // 遍历对象
+        for (const key in obj3) {
+            console.log(key, obj[key]);
+        }
+
+        //内置对象
+        console.log(Math.PI);
+        console.log(new Date());
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
