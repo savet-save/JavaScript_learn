@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>document</title>
+</head>
+
+<body>
+    <div id="item">
+        <span class="erwerima">x</span>
+    </div>
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+    </ul>
+</body>
+
+<script>
+    // 节点
+    var obj = document.querySelector('.erwerima');
+    console.log(obj.parentNode);
+
+    var obj = document.querySelector('ul');
+    console.log(obj.childNodes);
+    console.log(obj.childNodes[0].nodeType);
+    console.log(obj.childNodes[1].nodeType);
+
+    obj.appendChild(document.createElement('li'));
+</script>
+
+</html>

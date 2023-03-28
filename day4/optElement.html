@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>document</title>
+</head>
+
+<body>
+    <div id="item">time</div>
+    <button id="btn">click</button>
+    <button id="btn2">click2</button>
+    <input type="text" value="null">
+    <div id="item2" data-index="2">null</div>
+</body>
+
+<script>
+    // 操作元素
+    var btn = document.getElementById('btn');
+    var item = document.getElementById('item');
+    btn.onclick = function(params) {
+        item.innerText = new Date();
+
+    }
+    var btn2 = document.getElementById('btn2');
+    var input = document.querySelector('input');
+    btn2.onclick = function(params) {
+        input.value = 'a';
+        // btn2.disabled = true;
+        this.disabled = true;
+    }
+
+    var item2 = document.getElementById('item2');
+    console.log(item2.getAttribute('data-index'));
+</script>
+
+</html>

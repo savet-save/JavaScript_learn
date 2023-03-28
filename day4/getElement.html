@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>document</title>
+</head>
+
+<body>
+    <div id="item">2023-3-26</div>
+    <div id="item2">2023-3-25</div>
+    <div class="item3">2023-3-24</div>
+</body>
+
+<script>
+    // 获取元素
+    var obj = document.getElementById('item');
+    console.log(obj);
+    console.dir(obj);
+    console.log(typeof obj);
+
+    var obj2 = document.getElementsByTagName('div');
+    console.dir(obj2);
+
+    var obj3 = document.getElementsByClassName('item3');
+    console.dir(obj3);
+
+    var obj4 = document.querySelector('.item3');
+    console.dir(obj4);
+
+    console.dir(document.body);
+    console.dir(document.documentElement);
+</script>
+
+</html>
