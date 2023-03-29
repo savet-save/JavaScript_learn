@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>document</title>
+</head>
+
+<body>
+    <button id="btn">click</button>
+    <button id="btn2">click2</button>
+
+    <div class="fa"  >
+        <div class="so">son</div>
+    </div>
+
+    <div class="eventObj">eventObj</div>
+</body>
+
+<script>
+    // 事件高级
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', function() {
+        alert('clicked')
+    });
+
+    // 仅IE9支持
+    // var btn2 = document.getElementById('btn2');
+    // btn2.attachEvent('onclick', function() {
+    //     alert('clicked')
+    // });
+
+    var son = document.querySelector('.so');
+    son.addEventListener('click', function(){
+        alert('son');
+    }, true);
+
+    var fa = document.querySelector('.fa');
+    fa.addEventListener('click', function(){
+        alert('fa');
+    }, true);
+
+    var eventObj = document.querySelector('.eventObj');
+    eventObj.addEventListener('click', function(event){
+        console.dir(event);
+    })
+
+    // 禁用右键菜单
+    document.addEventListener('contextmenu', function(e){
+        e.preventDefault();
+    })
+
+    // 禁止选中文字
+    document.addEventListener('selectstart', function(e){
+        e.preventDefault();
+    })
+
+    // 按键监听
+    document.addEventListener('keyup', function(e){
+        console.log(e.keyCode);
+    })
+</script>
+
+</html>
