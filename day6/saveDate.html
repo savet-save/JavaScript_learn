@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>window</title>
+</head>
+
+<body>
+    <button class="save">save</button>
+    <button class="get">get</button>
+</body>
+
+<script>
+    // 存储数据
+    // sessionStorage
+    var save = document.querySelector('.save');
+    var get = document.querySelector('.get');
+    save.addEventListener('click', function(){
+        sessionStorage.setItem('data', '123');
+    })
+
+    get.addEventListener('click', function(){
+        console.log(sessionStorage.getItem('data'));
+    })
+
+    // localStorage
+    save.addEventListener('click', function(){
+        localStorage.setItem('localData', '123');
+    })
+
+    get.addEventListener('click', function(){
+        console.log(localStorage.getItem('localData'));
+    })
+</script>
+
+</html>
